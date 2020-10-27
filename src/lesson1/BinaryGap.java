@@ -4,7 +4,7 @@ package lesson1;
 // Description:
 // https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
 
-class Solution {
+class BinaryGap {
     public int solution(int N) {
         String binaryRep = Integer.toBinaryString(N);
         int maxGap = 0;
