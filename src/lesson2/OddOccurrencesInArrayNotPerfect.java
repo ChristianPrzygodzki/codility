@@ -11,8 +11,8 @@ import java.util.Map;
 public class OddOccurrencesInArrayNotPerfect {
     public int solution(int[] A) {
         Map<Integer,Integer> map = new HashMap<>();
-        for(int i = 0; i < A.length; i++){
-            map.merge(A[i], 1, Integer::sum);
+        for (int i : A) {
+            map.merge(i, 1, Integer::sum);
         }
         for(Integer k: map.keySet()){
             if(map.get(k)==1){
