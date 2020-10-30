@@ -8,7 +8,7 @@ package lesson2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class OddOccurrencesInArrayNotPerfect {
+public class OddOccurrencesInArray_NotPerfect {
     public int solution(int[] A) {
         Map<Integer,Integer> map = new HashMap<>();
         for (int i : A) {
