@@ -19,7 +19,7 @@ public class FrogRiverOne_NotPerfectEither {
         for(int i:indices){
             if(i == -1){
                 return -1;
-            };
+            }
         }
         Arrays.sort(indices);
         return indices[X-1];
