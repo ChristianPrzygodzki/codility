@@ -11,7 +11,7 @@ public class CountDiv {
         // 1.
         // We check if there is additional number, which we needed to erase in
         // our way of counting (see 2.)
-        // If so, we need to add it to the final result
+        // If so, we need to add it to the final result.
         if(A%K != 1 && K != 1 && ( (B - A + 1 > K - A%K) || (A%K == 0) ) ){
             additional = 1;
         }
