@@ -3,7 +3,7 @@ package lesson6;
 // Max product of three task
 // Description:
 // https://app.codility.com/programmers/lessons/6-sorting/max_product_of_three/
-// score: 88%, Correctness: 100%, Performance: 80%
+// Score: 88%, Correctness: 100%, Performance: 80%
 
 import java.util.Arrays;
 
