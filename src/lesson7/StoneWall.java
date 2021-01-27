@@ -14,9 +14,9 @@ public class StoneWall {
         // as long as possible horizontally, then give them extra
         // height if possible. However I do not know yet if it is
         // always optimal (lowest nr).
-        int counter = 0;
+//         int counter = 0; // wont need it I guess
 
-        return 0;
+        return giveMinimalNumberOfRectangles(H);
     }
     private int giveMinimalNumberOfRectangles(int[] wall){
 
@@ -26,7 +26,24 @@ public class StoneWall {
             wall[i]-=minimalHeight;
         }
         List<int[]> smallWalls = new ArrayList<int[]>();
-        // TODO smallWalls construction
+
+        // smallWalls construction
+        for(int i = 0; i < wall.length; i++){
+            int smallWallLength = 0;
+            while(i < wall.length && wall[i]==0 ){
+                i++;
+            }
+            while(i < wall.length && wall[i]!=0){
+                smallWallLength++;
+                i++;
+            }
+            int[] smallWall = new int[smallWallLength];
+            for (int j = 0; j < smallWallLength; j++) {
+                smallWall[j] = wall[i-smallWallLength+j];
+            }
+            smallWalls.add(smallWall);
+        }
+
         int result = 1; // long rectangle at the bottom
         for(int[] smallWall:smallWalls){
             result+=giveMinimalNumberOfRectangles(smallWall);
